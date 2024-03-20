@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- <meta name="description" -->
+        <!-- content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos."> -->
+  <!-- <meta name="keywords" content="Nerfies, D-NeRF, NeRF"> -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <title>Facial Geometric Detail Recovery via Implicit Representation</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Facial Geometric Detail Recovery via Implicit Representation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+                <a href="https://xingyuren.github.io/">Xingyu Ren</a>,</span>
+            <span class="author-block">
+                <a href="https://alexlattas.com/">Alexandros Lattas</a>,</span>
+            <span class="author-block">
+              <a href="https://barisgecer.github.io/">Baris Gecer</a>,</span>
+            <span class="author-block">
+              <a href="https://jiankangdeng.github.io/">Jiankang Deng</a>,</span>
+            <span class="author-block">
+              <a href="https://vision.sjtu.edu.cn/">Chao Ma</a>,</span>
+            <span class="author-block">
+                <a>Xiaokang Yang</a>
+            </span>
+            <span class="author-block">
+              <a herf="https://www.imperial.ac.uk/people/s.zafeiriou">Stefanos Zafeiriou</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">MoE Key Lab of Artificial Intelligence, AI Institute, Shanghai Jiao Tong University</span>
+            <span class="author-block">Imperial College London, Huawei CBG</span>
+            <span class="author-block">Huawei CBG</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://ieeexplore.ieee.org/document/10042505"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Arxiv Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2203.09692"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=d79P6koYTXY"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/deepinsight/insightface/tree/master/reconstruction/PBIDR"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Comming Soon)</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img class="img-responsive" src="./static/images/teaser.pdf" alt="Teaser">
+      <h2 class="subtitle has-text-justified">
+        <span class="PBIDR">We introduce a single-facial-image geometric detail recovery algorithm. Our
+          method generates complete high-fidelity texture maps from occluded facial images,
+          and employs implicit renderer and shape functions, to derive fine geometric details
+          from decoupled detail normals. As a bonus, it disentangles the facial texture into ap-
+          proximate diffuse albedo, diffuse and specular shading in a self-supervision manner.
+          Input images are from FFHQ and CelebAMask-HQ.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Learning a dense 3D model with fine-scale details from a single facial image is highly challenging and ill-posed. To address this problem, many approaches fit smooth geometries through facial prior while learning details as additional displacement maps or personalized basis. However, these techniques typically require vast datasets of paired multi-view data or 3D scans, whereas such datasets are scarce and expensive.
+          </p>
+          <p>
+            To alleviate heavy data dependency, we present a robust texture-guided geometric detail recovery approach using only a single in-the-wild facial image. Specifically, we inpaint occluded facial parts, generate complete textures, and build an accurate multi-view dataset of the target subject. In order to estimate the detailed geometry, we define an implicit signed distance function and employ a physically-based implicit renderer to reconstruct fine geometric details from the generated multiview images. Our method not only recovers accurate facial details but also decomposes the diffuse and specular albedo, normals and shading components in a self-supervised way. Finally, we register the implicit shape details to a 3D Morphable Model template, which can be used in traditional modeling and rendering pipelines. Extensive experiments demonstrate that the proposed approach can reconstruct impressive facial details from a single image, especially when compared with state-of-the-art methods trained on large datasets.  
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/watch?v=d79P6koYTXY"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+    <!-- Paper Pipeline. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Pipeline</h2>
+        <img class="img-responsive" src="./static/images/pipeline.pdf" alt="Pipeline">
+        <div class="content has-text-justified">
+        <span class="Pipeline">Overview of our method. Left: we perform a robust texture completion, utilizing StyleGANv2 to repair both externally- and self-occluded regions as preprocessing. Right: Based on a coarse 3DMM fitting, we render a multi-view dataset and use an implicit signed distance function and a novel physically-based implicit differentiable renderer (PBIDR) to improve the coarse shape. Based on the self-supervised decomposition of diffuse normal and specular normal, we obtain a detailed facial geometry as well as approximate diffuse albedo, diffuse shading and specular shading.
+        </div>
+      </div>
+    </div>
+    <!--/ Paper Pipeline. -->
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{ren2023facial,
+      title={Facial geometric detail recovery via implicit representation},
+      author={Ren, Xingyu and Lattas, Alexandros and Gecer, Baris and Deng, Jiankang and Ma, Chao and Yang, Xiaokang},
+      booktitle={2023 IEEE 17th International Conference on Automatic Face and Gesture Recognition (FG)},
+      pages={1--8},
+      year={2023},
+      organization={IEEE}
+    }
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            We borrow the website <a href="https://github.com/nerfies/nerfies.github.io">template</a> from this,
+            many thanks for their great help!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
